@@ -81,7 +81,7 @@ class Pool
 
         void match()
         {
-            for (uint32_t i = 0; i <= wt.size(); i ++ )
+            for (uint32_t i = 0; i < wt.size(); i ++ )
                 wt[i] ++ ; // waiting time + 1
 
             while (users.size() > 1)
@@ -103,7 +103,7 @@ class Pool
                             break;
                         }
                     }
-                    if (flag) break;
+                    if (!flag) break;
                 }
                 if (flag) break;
             }
